@@ -12,7 +12,7 @@ In the project directory, you can run:
 
 Please note that the API has a rate limit of 50 calls per day.
 
-## Environemnt Variables
+## Env Variables
 
 In order to successfully run this app, a .env with the following is required:
 
