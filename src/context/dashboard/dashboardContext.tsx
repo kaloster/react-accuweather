@@ -16,7 +16,6 @@ interface IContextProps {
   setCurrentCity: any;
   metric: boolean;
   error: any;
-  //   loading: any;
 }
 
 const dashboardContext = createContext({} as IContextProps);
