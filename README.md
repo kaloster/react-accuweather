@@ -11,3 +11,5 @@ In the project directory, you can run:
 ## API Limitaions
 
 Please note that the API has a rate limit of 50 calls per day.
+
+![React AccuWeather](https://ibb.co/CWqbMbN)
