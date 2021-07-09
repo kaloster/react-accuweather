@@ -2,15 +2,15 @@ import { createContext } from "react";
 
 interface IContextProps {
   getRegions: any;
-  regions: any;
-  country: any;
-  countries: any;
+  regions: Array<object>;
+  country: object;
+  countries: Array<object>;
   getCountries: any;
   setCountry: any;
   city: string;
   citykey: string;
-  cities: any;
-  forecast: any;
+  cities: Array<object>;
+  forecast: Array<object>;
   getCities: any;
   getCityForescast: any;
   setCurrentCity: any;
