@@ -29,6 +29,7 @@ const SelectCountry = ({ countries }: Results) => {
         options={countries}
         name='countries'
         isSearchable
+        placeholder='Search or select Country...'
       />
     </>
   );

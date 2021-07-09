@@ -19,6 +19,10 @@ const Wrapper = styled.section`
   padding: 1em;
 `;
 
+const Icon = styled.i.attrs((props) => ({
+  className: "fa fa-sun pl-3 text text-warning",
+}))``;
+
 const Dashboard = () => {
   const dashboardContext = useContext(DashboardContext);
   const { getRegions, regions, countries, country, cities, forecast, city } =
@@ -33,7 +37,10 @@ const Dashboard = () => {
     <>
       <header className='App-header'>
         <Wrapper>
-          <Title>React AccuWeather</Title>
+          <Title>
+            React AccuWeather
+            <Icon />
+          </Title>
         </Wrapper>
         {regions && <SelectRegion regions={regions} />}
         {countries && <SelectCountry countries={countries} />}

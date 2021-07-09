@@ -37,7 +37,7 @@ const CityFilter = () => {
       <form>
         <Wrapper>
           <Input
-            placeholder='Search...'
+            placeholder='Type in City name'
             value={Object.keys(citysearch).length === 0 ? "" : citysearch}
             name='city'
             onChange={(ev: React.ChangeEvent<HTMLInputElement>) =>

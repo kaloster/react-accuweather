@@ -27,16 +27,17 @@ const SelectUnit = () => {
   };
 
   var options = [
-    { value: 1, label: "Farenheit" },
-    { value: 2, label: "Metric" },
+    { value: 1, label: "Farenheit °F" },
+    { value: 2, label: "Metric °C" },
   ];
   return (
     <>
       <UnitSelect
-        defaultValue={{ value: 2, label: "Metric" }}
+        defaultValue={{ value: 2, label: "Metric °C" }}
         onChange={(value: number) => selectChange(value)}
         options={options}
         name='units'
+        placeholder='Select Unit'
       />
     </>
   );

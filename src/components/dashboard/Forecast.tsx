@@ -13,7 +13,7 @@ const Row = styled.div.attrs((props) => ({
   padding-top: 10px;
 `;
 const Col = styled.div.attrs((props) => ({
-  className: "col small",
+  className: "col small bg-secondary p-3 m-3 rounded",
 }))``;
 const H1 = styled.h1.attrs((props) => ({
   className: "h3",
@@ -35,6 +35,17 @@ interface Results {
   city: string;
 }
 
+const setUnit = (unit: string) => {
+  switch (unit) {
+    case "F":
+      return "°F";
+    case "C":
+      return "°C";
+    default:
+      break;
+  }
+};
+
 const Forecast = ({ forecast, city }: Results) => {
   return (
     <Container>
@@ -49,11 +60,12 @@ const Forecast = ({ forecast, city }: Results) => {
                 <Day>{moment(day.Date).format("dddd, ll")}</Day>
                 <P>
                   High/Low - {day.Temperature.Maximum.Value}
-                  {day.Temperature.Maximum.Unit}/{day.Temperature.Minimum.Value}
-                  {day.Temperature.Minimum.Unit}
+                  {setUnit(day.Temperature.Maximum.Unit)}/
+                  {day.Temperature.Minimum.Value}
+                  {setUnit(day.Temperature.Minimum.Unit)}
                 </P>
                 <P>
-                  Day - {day.Day.IconPhrase} -{" "}
+                  Day - {day.Day.IconPhrase.substring(0, 11)} -{" "}
                   <Img
                     alt={day.Day.IconPhrase}
                     src={`${iconUrl}${day.Day.Icon < 10 ? 0 : ""}${
@@ -61,7 +73,7 @@ const Forecast = ({ forecast, city }: Results) => {
                     }-s.png`}
                   />
                   <br />
-                  Night - {day.Night.IconPhrase} -{" "}
+                  Night - {day.Night.IconPhrase.substring(0, 11)} -{" "}
                   <Img
                     alt={day.Night.IconPhrase}
                     src={`${iconUrl}${day.Night.Icon < 10 ? 0 : ""}${
