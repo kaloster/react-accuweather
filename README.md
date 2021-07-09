@@ -19,4 +19,4 @@ In order to successfully run this app, a .env with the following is required:
 `REACT_APP_BASE_URL=http://dataservice.accuweather.com/`
 `REACT_APP_AW_APIKEY=yourkeygoeshere`
 
-![React AccuWeather](https://i.ibb.co/CWqbMbN/Screen-Shot-2021-07-09-at-1-31-12-AM.png)
+![React AccuWeather](https://lh3.googleusercontent.com/pw/AM-JKLV20ScT01EwNZaR6y138zanUgU2wAonyK63D68qMqJtQQdr8whm_6iJzUESNnIGEvNmF-JKoQ5UYXiE6qv_nDgTjstOmC2ZTNv8CA3iWegBcc1wNC3d-8xCvccd0x-lOezl50SB4v_5R8OWRSPr6_55=w2434-h1636-no?authuser=0)
