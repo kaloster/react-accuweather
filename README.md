@@ -10,7 +10,7 @@ Boilerplate: Typescript, React Hooks, Context API, styled-components, react-sele
 
 ## Env Variables
 
-.env with the following is required:
+.env with the following is required (see .env.development.local):
 
 `REACT_APP_BASE_URL=http://dataservice.accuweather.com/`
 
