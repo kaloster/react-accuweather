@@ -13,7 +13,7 @@ const Row = styled.div.attrs((props) => ({
   padding-top: 10px;
 `;
 const Col = styled.div.attrs((props) => ({
-  className: "col small bg-secondary p-3 m-3 rounded",
+  className: "col small bg-secondary p-2 m-2 rounded text-center pt-3",
 }))``;
 const H1 = styled.h1.attrs((props) => ({
   className: "h3",
@@ -65,7 +65,7 @@ const Forecast = ({ forecast, city }: Results) => {
                   {setUnit(day.Temperature.Minimum.Unit)}
                 </P>
                 <P>
-                  Day - {day.Day.IconPhrase.substring(0, 11)} -{" "}
+                  Day - {day.Day.IconPhrase.substring(0, 13)} -{" "}
                   <Img
                     alt={day.Day.IconPhrase}
                     src={`${iconUrl}${day.Day.Icon < 10 ? 0 : ""}${
@@ -73,7 +73,7 @@ const Forecast = ({ forecast, city }: Results) => {
                     }-s.png`}
                   />
                   <br />
-                  Night - {day.Night.IconPhrase.substring(0, 11)} -{" "}
+                  Night - {day.Night.IconPhrase.substring(0, 13)} -{" "}
                   <Img
                     alt={day.Night.IconPhrase}
                     src={`${iconUrl}${day.Night.Icon < 10 ? 0 : ""}${

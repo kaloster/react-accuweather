@@ -1,16 +1,14 @@
 # Welcome to React AccuWeather
 
-By: Ronen Kalo
-
 ## Overview
 
-A react app that consumes AccuWeather's API.
+A React app that consumes AccuWeather's API.
 
-Some of the tools leveraged in this project: React Hooks, Context API, Typescript, styled-components, react-select, bootstrap.
+Boilerplate: Typescript, React Hooks, Context API, styled-components, react-select, bootstrap.
 
 ## Env Variables
 
-In order to successfully run this app, a .env with the following is required:
+.env with the following is required:
 
 `REACT_APP_BASE_URL=http://dataservice.accuweather.com/`
 
@@ -20,10 +18,10 @@ In order to successfully run this app, a .env with the following is required:
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` and then `npm start`
 
 ## API Limitations
 
-Please note that the API has a rate limit of 50 calls per day.
+Please note that the API has a rate limit of 50 calls per day for free accounts.
 
-![React AccuWeather](https://lh3.googleusercontent.com/pw/AM-JKLWNtQOJlXR2lWLU04WgEhACttALnbbEpr5CiMYOM7EV5XYCpefV1GZ4Wi_HfL9l55gHi28EIchXQZZZ_7nBxoWJOfj43OiPnp-Se_g5SRD49xGiOjC8-MsoerEqrLFBAXlOu_sTedDlewOfZA8mnqah=w2718-h1824-no?authuser=0)
+![React AccuWeather](https://lh3.googleusercontent.com/pw/AM-JKLUSXGsQbv_z2tqHESBk5mJn7xvPe7oIZx1LwE056EZN4yDW3mVaiGZk0Cz71FhTjDPptH8Sd7NIpwHtS6Zhy4DOFche7xtk44shr1-KF73Tf1Nhv1U-YydH7g-Fz0Mfa4O5ndKoBlHZoG_vuRg6bMgv=w3820-h1928-no?authuser=0)

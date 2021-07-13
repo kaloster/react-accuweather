@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, Fragment } from "react";
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
 import DashboardContext from "../../context/dashboard/dashboardContext";
 
 const Button = styled.button.attrs((props) => ({
   className: "btn btn-link btn-sm b-0",
+}))``;
+
+const Col = styled.div.attrs((props) => ({
+  className: "col",
 }))``;
 
 interface Results {
@@ -16,14 +20,14 @@ const SelectCity = ({ cities }: Results) => {
   const { getCityForescast, setCurrentCity } = dashboardContext;
 
   return (
-    <>
+    <Col>
       {cities.length === 0 ? (
         "No results found. Please try another search."
       ) : (
         <>
           Please select a city:
           {cities.map((city: any) => (
-            <div key={uuidv4()}>
+            <Fragment key={uuidv4()}>
               <Button
                 onClick={() => {
                   setCurrentCity(
@@ -34,12 +38,11 @@ const SelectCity = ({ cities }: Results) => {
               >
                 {city.LocalizedName}, {city.AdministrativeArea.ID}
               </Button>
-              <br />
-            </div>
+            </Fragment>
           ))}
         </>
       )}
-    </>
+    </Col>
   );
 };
 

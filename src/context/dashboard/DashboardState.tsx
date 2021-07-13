@@ -3,7 +3,6 @@ import axios from "axios";
 import { baseUrl, apikey } from "../../config/const";
 import dashboardReducer from "./dashboardReducer";
 import DashboardContext from "./dashboardContext";
-import { setRegions, setCountries } from "../../utils/helper";
 
 import {
   GET_REGIONS,
@@ -20,6 +19,17 @@ const config = {
   headers: {
     "Content-Type": "application/json",
   },
+};
+
+const setOptions = (options: any) => {
+  var listOptions = [];
+  for (var key in options) {
+    var listOption: any = {};
+    listOption["value"] = options[key].ID;
+    listOption["label"] = options[key].EnglishName;
+    listOptions.push(listOption);
+  }
+  return listOptions;
 };
 
 const DashboardState = (props: any) => {
@@ -45,7 +55,7 @@ const DashboardState = (props: any) => {
       );
       dispatch({
         type: GET_REGIONS,
-        payload: setRegions(res.data),
+        payload: setOptions(res.data),
       });
     } catch (err) {
       dispatch({ type: SET_ERROR, payload: err.response.data });
@@ -61,7 +71,7 @@ const DashboardState = (props: any) => {
       );
       dispatch({
         type: GET_COUNTRIES,
-        payload: setCountries(res.data),
+        payload: setOptions(res.data),
       });
     } catch (err) {
       dispatch({ type: SET_ERROR, payload: err.response.data });

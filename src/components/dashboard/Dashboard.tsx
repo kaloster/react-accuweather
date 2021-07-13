@@ -1,13 +1,10 @@
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
-import SelectRegion from "./SelectRegion";
-import SelectCountry from "./SelectCountry";
+import SelectOption from "./SelectOption";
 import CityFilter from "./CityFilter";
 import SelectCity from "./SelectCity";
-
 import DashboardContext from "../../context/dashboard/dashboardContext";
 import Forecast from "./Forecast";
-import SelectUnit from "./SelectUnit";
 
 const Title = styled.h1`
   font-size: 2.5em;
@@ -23,15 +20,28 @@ const Icon = styled.i.attrs((props) => ({
   className: "fa fa-sun pl-3 text text-warning",
 }))``;
 
+const Row = styled.div.attrs((props) => ({
+  className: "row",
+}))``;
+
 const Dashboard = () => {
   const dashboardContext = useContext(DashboardContext);
-  const { getRegions, regions, countries, country, cities, forecast, city } =
-    dashboardContext;
+  const {
+    setCountry,
+    getCountries,
+    getCityForescast,
+    regions,
+    countries,
+    country,
+    cities,
+    forecast,
+    city,
+  } = dashboardContext;
 
-  useEffect(() => {
-    getRegions();
-    // eslint-disable-next-line
-  }, []);
+  var units = [
+    { value: 1, label: "Farenheit °F" },
+    { value: 2, label: "Metric °C" },
+  ];
 
   return (
     <>
@@ -42,11 +52,31 @@ const Dashboard = () => {
             <Icon />
           </Title>
         </Wrapper>
-        {regions && <SelectRegion regions={regions} />}
-        {countries && <SelectCountry countries={countries} />}
-        {country && <CityFilter />}
-        {cities && !forecast && <SelectCity cities={cities} />}
-        {city && <SelectUnit />}
+        <Row>
+          {
+            <SelectOption
+              options={regions}
+              selectAction={getCountries}
+              selectName='region'
+            />
+          }
+          {countries && (
+            <SelectOption
+              options={countries}
+              selectAction={setCountry}
+              selectName='country'
+            />
+          )}
+          {country && <CityFilter />}
+          {cities && !forecast && <SelectCity cities={cities} />}
+          {city && (
+            <SelectOption
+              options={units}
+              selectAction={getCityForescast}
+              selectName='unit'
+            />
+          )}
+        </Row>
         {forecast && <Forecast forecast={forecast} city={city} />}
       </header>
     </>
