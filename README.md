@@ -1,6 +1,6 @@
 # Welcome to React AccuWeather
 
-demo: https://i.imgur.com/cwe95tr.mp4
+https://i.imgur.com/cwe95tr.mp4
 
 ## Overview
 
