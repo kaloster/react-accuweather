@@ -24,4 +24,4 @@ In the project directory, you can run:
 
 Please note that the API has a rate limit of 50 calls per day for free accounts.
 
-![React AccuWeather](https://lh3.googleusercontent.com/pw/AM-JKLUSXGsQbv_z2tqHESBk5mJn7xvPe7oIZx1LwE056EZN4yDW3mVaiGZk0Cz71FhTjDPptH8Sd7NIpwHtS6Zhy4DOFche7xtk44shr1-KF73Tf1Nhv1U-YydH7g-Fz0Mfa4O5ndKoBlHZoG_vuRg6bMgv=w3820-h1928-no?authuser=0)
+![React AccuWeather](https://imgur.com/a/hbHmgBZ)
