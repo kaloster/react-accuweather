@@ -53,7 +53,6 @@ const DashboardState = (props: any) => {
         `${baseUrl}/locations/v1/regions?apikey=${apikey}`,
         config
       );
-      console.log(res.data);
       dispatch({
         type: GET_REGIONS,
         payload: setOptions(res.data),
