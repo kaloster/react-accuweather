@@ -53,13 +53,11 @@ const Dashboard = () => {
           </Title>
         </Wrapper>
         <Row>
-          {
-            <SelectOption
-              options={regions}
-              selectAction={getCountries}
-              selectName='region'
-            />
-          }
+          <SelectOption
+            options={regions}
+            selectAction={getCountries}
+            selectName='region'
+          />
           {countries && (
             <SelectOption
               options={countries}
