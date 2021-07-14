@@ -2,7 +2,7 @@
 
 DEMO: https://react-accu.herokuapp.com/
 
-Visual Preview: https://i.imgur.com/cwe95tr.mp4
+Video: https://i.imgur.com/cwe95tr.mp4
 
 ## Overview
 
