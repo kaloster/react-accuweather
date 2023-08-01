@@ -1,7 +1,5 @@
 # Welcome to React AccuWeather
 
-DEMO: https://react-accu.herokuapp.com/
-
 Video: https://i.imgur.com/cwe95tr.mp4
 
 ## Overview
