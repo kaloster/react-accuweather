@@ -57,7 +57,7 @@ const DashboardState = (props: any) => {
         type: GET_REGIONS,
         payload: setOptions(res.data),
       });
-    } catch (err) {
+    } catch (err: any) {
       dispatch({ type: SET_ERROR, payload: err.response.data });
     }
   };
@@ -73,7 +73,7 @@ const DashboardState = (props: any) => {
         type: GET_COUNTRIES,
         payload: setOptions(res.data),
       });
-    } catch (err) {
+    } catch (err: any) {
       dispatch({ type: SET_ERROR, payload: err.response.data });
     }
   };
@@ -97,7 +97,7 @@ const DashboardState = (props: any) => {
         type: GET_CITIES,
         payload: res.data,
       });
-    } catch (err) {
+    } catch (err: any) {
       dispatch({ type: SET_ERROR, payload: err.response });
     }
   };
@@ -128,7 +128,7 @@ const DashboardState = (props: any) => {
         type: SET_CITY_KEY,
         payload: citykey,
       });
-    } catch (err) {
+    } catch (err: any) {
       dispatch({ type: SET_ERROR, payload: err.response });
     }
   };
